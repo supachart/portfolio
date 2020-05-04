@@ -26,4 +26,15 @@
     margin-top: 18px;
     padding: 12px;
   }
+
+  &__ml {
+    & .letter {
+      display: inline-block;
+      line-height: 1em;
+
+      &--red {
+        color: #e31b6d;
+      }
+    }
+  }
 }
