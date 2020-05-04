@@ -6,6 +6,27 @@
 
   &__header {
     display: flex;
+    justify-content: flex-end;
+    height: 48px;
+    background: #1b242f;
+    border-bottom: 3px solid #fff;
+
+    > a {
+      color: #fff;
+      text-decoration: none;
+      padding: 12px;
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        color: #e31b6d;
+        transform: scale(1.2);
+      }
+
+    }
+
+    &--active {
+      color: #e31b6d !important;
+    }
   }
 
   &__content {
