@@ -7,23 +7,15 @@ import Layout from "../components/Layout";
 import Contact from "../components/Contact";
 
 const Routes = () => (
-  <Switch>
-    <Layout>
+  <Layout>
+    <Switch>
       <Route exact path="/" component={Home} />
-    </Layout>
-    <Layout>
       <Route path="/experience" component={Experience} />
-    </Layout>
-    <Layout>
-      <Route path="/skills" component={Skills} />
-    </Layout>
-    <Layout>
       <Route path="/contact" component={Contact} />
-    </Layout>
-    <Layout>
+      <Route path="/skills" component={Skills} />
       <Route component={Home} />
-    </Layout>
-  </Switch>
+    </Switch>
+  </Layout>
 );
 
 export default Routes;
