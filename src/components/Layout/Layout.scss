@@ -13,7 +13,24 @@
     flex: auto;
   }
 
+  &__icon {
+    color: #fff;
+  }
+
   &__footer {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #181818;
+    color: #8f9aa7;
+
+    > div {
+      margin: 12px 0;
+    }
+  }
+
+  &__copyright {
+    font-size: 10pt;
   }
 }
