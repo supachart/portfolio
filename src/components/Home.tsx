@@ -11,7 +11,7 @@ const Home = () => (
         <span>I'm </span>
         <span className="Home__hero">Supachart Tansutiraphong.</span>
         <br />
-        <span>Full-stack developer</span>
+        <span>Full-stack developer.</span>
       </h1>
     </div>
     <div className="Home__submit">CONTACT ME</div>
