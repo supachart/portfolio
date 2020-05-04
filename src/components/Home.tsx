@@ -1,12 +1,20 @@
 import * as React from "react";
 
-const reactLogo = require("../assets/img/react_logo.svg");
+import '../assets/scss/Home.scss';
 
 const Home = () => (
-  <div className="app">
-    <h1>Hi, I'm Supachart Tansutiraphong. I'm a full-stack web developer</h1>
-    <p>Foo to the barz</p>
-    <img src={reactLogo.default} height="480"/>
+  <div className="Home">
+    <div className="Home__heroBanner">
+      <h1>
+        <span>Hi,</span>
+        <br />
+        <span>I'm </span>
+        <span className="Home__hero">Supachart Tansutiraphong.</span>
+        <br />
+        <span>Full-stack developer</span>
+      </h1>
+    </div>
+    <div className="Home__submit">CONTACT ME</div>
   </div>
 );
 

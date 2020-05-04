@@ -1,0 +1,29 @@
+.Home {
+  background-color: #252934;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__hero {
+    color: #e31b6d;
+  }
+
+  &__heroBanner {
+    margin: 0 auto;
+    width: 420px;
+
+    > h1 {
+      font-size: 16pt;
+    }
+  }
+
+  &__submit {
+    border: 2px solid #fff;
+    border-radius: 6px;
+    margin-top: 18px;
+    padding: 12px;
+  }
+}

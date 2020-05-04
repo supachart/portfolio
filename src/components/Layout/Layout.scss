@@ -1,0 +1,19 @@
+.Layout {
+  min-height: 100vh;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    flex: auto;
+  }
+
+  &__footer {
+    display: flex;
+  }
+}
