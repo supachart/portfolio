@@ -1,3 +1,70 @@
+@import '../../assets/scss/Mixin.scss';
+
 .Skills {
   display: flex;
+  flex: auto;
+
+  > div {
+    flex: 50%;
+  }
+
+  &__chart {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__table {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 0 auto;
+
+    > div {
+      padding: 12px;
+    }
+  }
+
+  &__column {
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+      flex: 50%;
+      padding: 6px 12px;
+
+      &:first-child {
+        text-align: left;
+        background-color: #04c2c9;
+        color: #fff;
+      }
+
+      &:last-child {
+        text-align: right;
+        background-color: #eee;
+      }
+    }
+
+  }
+}
+
+.Skills__ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 4.5em;
+  height: 1em;
+  width: 1em;
+}
+
+.Skills__ml6 .Skills__letters {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  white-space: nowrap;
 }
