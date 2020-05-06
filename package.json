@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Portfolio build with React, Webpack (with Hot Module Replacement), Typescript and Babel.",
   "keywords": [
     "react",
