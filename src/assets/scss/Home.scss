@@ -1,3 +1,5 @@
+@import '../../assets/scss/App.scss';
+
 .Home {
   background-color: #252934;
   color: #fff;
@@ -21,10 +23,8 @@
   }
 
   &__submit {
-    border: 2px solid #fff;
-    border-radius: 6px;
+    @extend .submit;
     margin-top: 18px;
-    padding: 12px;
   }
 
   &__ml {
