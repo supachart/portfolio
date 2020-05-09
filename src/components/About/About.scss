@@ -1,0 +1,56 @@
+@keyframes swcrawl {
+  0% {
+  	transform: rotatex(45deg) translateY(470px);
+		opacity:1;
+	}
+  25% {
+    opacity:1;
+  }
+  65% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+    transform: rotatex(45deg) translateY(-500px);
+  }
+}
+
+.About {
+  background:url('http://www.ultradrive.com/images/rdx_starfield.jpg');
+  color:#E6CA3A;
+  overflow:hidden;
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin: 12px;
+  }
+
+  &__fall {
+    width: 320px;
+    max-height: 400px;
+    font-family:'Franklin Gothic Book',sans-serif;
+    font-size:32px;
+    line-height:50px;
+    text-indent:50px;
+    margin:auto;
+    text-align:justify;
+    perspective:400px;
+    font-weight:bold;
+
+    & > p {
+      margin:auto;
+      width:100%;
+      height:100%;
+      text-align:justify;
+      animation-name:swcrawl;
+      // animation-delay:15s;
+      animation-duration:45s;
+      animation-iteration-count: infinite;
+      opacity:0;
+    }
+  }
+}
