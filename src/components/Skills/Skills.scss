@@ -4,8 +4,23 @@
   display: flex;
   flex: auto;
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   > div {
     flex: 50%;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > h1 {
+      margin: 12px 0;
+    }
   }
 
   &__chart {
@@ -21,10 +36,9 @@
     display: flex;
     flex-direction: column;
     width: 320px;
-    margin: 0 auto;
 
     > div {
-      padding: 12px;
+      padding: 6px;
     }
   }
 
@@ -47,7 +61,35 @@
         background-color: #eee;
       }
     }
+  }
 
+  &__title {
+    position: relative;
+    display: inline-block;
+
+    &__letter {
+      display: inline-block;
+    }
+
+    &__line {
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background: #000;
+      transform-origin: 0 0;
+
+      &.upper {
+        @extend .Skills__title__line;
+        top: 0;
+      }
+
+      &.lower {
+        @extend .Skills__title__line;
+        bottom: 0;
+      }
+    }
   }
 }
 
@@ -56,7 +98,11 @@
   font-weight: 900;
   font-size: 4.5em;
   height: 1em;
-  width: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 48px 0;
 }
 
 .Skills__ml6 .Skills__letters {

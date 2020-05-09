@@ -5,12 +5,19 @@ import anime from 'animejs';
 import './Skills.scss';
 
 const Skills = ({
+  title,
   data,
   dataChart,
 }) => (
   <div className="Skills">
     <div className="Skills__text">
-      <h1>Skills</h1>
+      <h1>
+        <span className="Skills__title">
+          <span className="Skills__title__line upper"></span>
+          <span dangerouslySetInnerHTML={title}></span>
+          <span className="Skills__title__line lower"></span>
+        </span>
+      </h1>
       <div className="Skills__table">
         {data.map(({ name, year }) => (
           <div
@@ -51,7 +58,7 @@ export default () => {
   ];
   const dataChart = [
     'JavaScript', 'HTML 5', 'CSS', 'SCSS', 'NodeJS', 'SQL', 'Git', 'Restful',
-    'GraphQL', 'Ruby on Rails', 'Jest', 'SQL'
+    'GraphQL', 'Ruby on Rails', 'Jest',
   ];
   const ml4 = {
     opacityIn: [0, 1],
@@ -61,6 +68,10 @@ export default () => {
     durationOut: 600,
     delay: 500,
   }
+  const innerText = 'Skills'.replace(/\S/g, "<span class='Skills__title__letter'>$&</span>");
+  const title = {
+    __html: innerText,
+  };
 
   React.useEffect(() => {
     const loopAnime = anime.timeline({ loop: true })
@@ -80,13 +91,29 @@ export default () => {
         delay: ml4.delay
       })
     }
-    loopAnime.add({
-      targets: '.Skills__ml6',
-      opacity: 0,
+
+    anime.timeline().add({
+      targets: '.Skills__title__letter',
+      scale: [0.3, 1],
+      opacity: [0, 1],
+      translateZ: 0,
+      easing: "easeOutExpo",
       duration: 500,
-      delay: 500
+      delay: (el, i) => 70 * (i + 1),
+    }).add({
+      targets: '.Skills__title__line',
+      scaleX: [0, 1],
+      opacity: [0.5, 1],
+      easing: "easeOutExpo",
+      duration: 700,
+      offset: '-=875',
+      delay: (el, i, l) => 80 * (l - i),
     });
   }, [])
 
-  return Skills({ data, dataChart });
+  return Skills({
+    title,
+    data,
+    dataChart
+  });
 };
